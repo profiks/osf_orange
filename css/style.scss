@@ -1,5 +1,61 @@
 @import "reset.css";
 
+$white:#fff;
+$orange: #ff8809; 
+$orangeDark: #ff7400;
+
+
 body{
     background: #363636;
+}
+
+.content{
+    width: auto;
+    height: 1183px;
+    background: url(../img/background.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: 'Fangtasia';
+  src: url('http://www.fontsaddict.com/fontface/fangtasia.ttf');
+}
+
+.logo {
+    font-family: Fangtasia;
+    font-size: 80pt;
+    color: $white;
+    text-align: center;
+}
+
+.navigation {
+
+ul {
+    
+ padding-top: 20px;
+list-style-type: none;
+text-align: center;
+height: 53px;
+}
+
+ li { display: inline; }
+
+ a
+{
+text-decoration: none;  
+    font-size: 13pt;
+font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    padding: 23px;
+color: $white;
+}
+
+a:hover
+{
+color: $orangeDark;
+}
+
 }

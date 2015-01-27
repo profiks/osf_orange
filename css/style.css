@@ -2,4 +2,39 @@
 body {
   background: #363636; }
 
+.content {
+  width: auto;
+  height: 1183px;
+  background: url(../img/background.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+@font-face {
+  font-family: 'Fangtasia';
+  src: url("http://www.fontsaddict.com/fontface/fangtasia.ttf"); }
+.logo {
+  font-family: Fangtasia;
+  font-size: 80pt;
+  color: #fff;
+  text-align: center; }
+
+.navigation ul {
+  padding-top: 20px;
+  list-style-type: none;
+  text-align: center;
+  height: 53px; }
+.navigation li {
+  display: inline; }
+.navigation a {
+  text-decoration: none;
+  font-size: 13pt;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  padding: 23px;
+  color: #fff; }
+.navigation a:hover {
+  color: #ff7400; }
+
 /*# sourceMappingURL=style.css.map */
