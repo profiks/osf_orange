@@ -5,9 +5,13 @@ $orange: #ff8809;
 $orangeDark: #ff7400;
 
 
-body{
-    background: #363636;
-}
+$mobile-small:  240;
+$mobile-large:  320;
+$tablet-small:  480;
+$tablet-large:	768;
+$screen-small:	1024;
+$screen-large:	1280;
+
 
 .content{
     width: auto;
@@ -33,12 +37,13 @@ body{
 
 .navigation {
 
+
 ul {
-    
  padding-top: 20px;
 list-style-type: none;
 text-align: center;
-height: 53px;
+height: 53px;   
+    
 }
 
  li { display: inline; }
@@ -59,3 +64,22 @@ color: $orangeDark;
 }
 
 }
+
+#slide {
+width: 100%;
+    height: 451px;
+    
+}
+
+footer {
+height: 727px;
+width: auto;
+background: url(../img/gradient.jpg) repeat; 
+}
+
+.border{
+width: 100%;
+    height: 13px;
+background: url(../img/border.jpg) repeat-x;    
+}
+    
