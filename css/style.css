@@ -67,6 +67,28 @@
     .slide .prevSlide:hover {
       background: url(../img/btn.png) no-repeat 0 -24px; }
 
+p {
+  font-size: 11pt;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.5; }
+
+h2 {
+  font-size: 24pt;
+  font-family: "Helvetica", sans-serif;
+  font-style: bold;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px; }
+
+h3 {
+  font-size: 11pt;
+  font-family: "Helvetica", sans-serif;
+  font-style: bold;
+  color: #fff;
+  padding: 10px 1px; }
+
 .container_16 {
   padding-top: 10px;
   width: 980px;
@@ -95,17 +117,6 @@
         left: 0;
         bottom: 0;
         right: 0; }
-    .container_16 .grid_4 h3 {
-      font-size: 11pt;
-      font-family: "Helvetica", sans-serif;
-      font-style: bold;
-      color: #fff;
-      padding: 10px 1px; }
-    .container_16 .grid_4 p {
-      font-size: 11pt;
-      font-family: Georgia, "Times New Roman", Times, serif;
-      font-style: italic;
-      color: #fff; }
 
 .clear {
   clear: both; }
@@ -129,10 +140,44 @@ footer {
   height: 727px;
   width: auto;
   background: url(../img/gradient.jpg) repeat; }
-
-.border {
-  width: 100%;
-  height: 13px;
-  background: url(../img/border.jpg) repeat-x; }
+  footer .border {
+    width: 100%;
+    height: 13px;
+    background: url(../img/border.jpg) repeat-x; }
+  footer .centred {
+    max-width: 980px;
+    height: auto;
+    margin: 0 auto; }
+  footer .orange {
+    color: #ff8809; }
+  footer .signature {
+    color: #939393;
+    clear: left; }
+  footer .article {
+    width: 356px;
+    height: auto;
+    padding: 65px 55px 0 0;
+    float: left; }
+  footer .captions {
+    width: auto;
+    height: auto;
+    padding: 65px 0 0 0;
+    position: relative; }
+    footer .captions .absolute-orange {
+      width: 233px;
+      height: 170px;
+      background: url(../img/orange_footer.png) no-repeat;
+      position: absolute;
+      right: 0;
+      top: -50px; }
+    footer .captions .glass {
+      width: 73px;
+      height: 63px;
+      background: url(../img/glass.jpg) no-repeat;
+      border: 4px solid #ff7400;
+      margin: 15px 20px 22px 0;
+      float: left; }
+      footer .captions .glass:last-child {
+        clear: both; }
 
 /*# sourceMappingURL=style.css.map */
