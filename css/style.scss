@@ -13,8 +13,12 @@ $screen-small:	1024;
 $screen-large:	1280;
 
 
+
 .content{
-    width: auto;
+    
+
+  
+    width: auto ;
     height: 1183px;
     background: url(../img/background.jpg) no-repeat center center; 
   -webkit-background-size: cover;
@@ -28,6 +32,11 @@ $screen-large:	1280;
   src: url('http://www.fontsaddict.com/fontface/fangtasia.ttf');
 }
 
+@font-face {
+  font-family: 'Helvetica';
+  src: url(helvetica-bold.ttf);
+}
+
 .logo {
     font-family: Fangtasia;
     font-size: 80pt;
@@ -39,10 +48,15 @@ $screen-large:	1280;
 
 
 ul {
+    display: block;
  padding-top: 20px;
 list-style-type: none;
 text-align: center;
-height: 53px;   
+height: 53px;
+    width: 600px;
+    
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -51,10 +65,10 @@ height: 53px;
  a
 {
 text-decoration: none;  
-    font-size: 13pt;
+font-size: 13pt;
 font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-    padding: 23px;
+font-style: italic;
+padding: 10px;
 color: $white;
 }
 
@@ -62,12 +76,96 @@ a:hover
 {
 color: $orangeDark;
 }
-
 }
 
-#slide {
-width: 100%;
+
+
+  
+.slide {
+padding-bottom: 30px;
+width: 980px;
     height: 451px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    img{
+    padding-left: 50px;
+    }
+    
+    
+    
+    .nextSlide {
+        float: left;
+        width: 20px;
+        height: 24px;
+        background: url(../img/btn.png) no-repeat -20px 0;
+        
+        &:hover{
+            background: url(../img/btn.png) no-repeat -20px -24px;
+        }
+    }
+    
+    
+    .prevSlide {
+        float: left;
+        width: 20px;
+        height: 24px;
+        background: url(../img/btn.png) no-repeat 0 0;
+        
+        &:hover{
+            background: url(../img/btn.png) no-repeat 0 -24px;
+        }
+    }
+}
+
+.container_16{
+padding-top: 10px;
+width: 980px;
+margin-left: auto;
+margin-right: auto;
+   
+        .grid_4{
+            height: auto;
+            width: 218px;
+            float: left;
+            margin-right: 35px;
+            
+                &:last-child {
+                   margin-right: 0;
+                }
+            
+                .img{
+                    width: 218px;
+                    height: 145px;
+                    background: url(../img/gradient.jpg);
+                    position: relative;
+                    
+                        .plus{
+                            display: block;
+                            width: 21px;
+                            height: 22px;
+                            background: url(../img/plus.png) no-repeat;
+                            margin: auto;
+                            position: absolute;
+                      top: 0; left: 0; bottom: 0; right: 0;
+                        }
+                }
+            
+            h3 {
+            
+                font-size: 12pt;
+                font-family: "Helvetica", sans-serif;
+                font-style: bold;
+                color: $white;
+            }
+            
+            p{
+                font-size: 11pt;
+                    font-family: Georgia, "Times New Roman", Times, serif;
+                    font-style: italic;
+                   color: $white;
+            }
+        }
     
 }
 
