@@ -1,7 +1,7 @@
 @import url(reset.css);
 .content {
   width: auto;
-  height: 1183px;
+  min-height: 1183px;
   background: url(../img/background.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -18,7 +18,8 @@
   font-family: Fangtasia;
   font-size: 80pt;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  text-shadow: -2px 3px 2px #969696; }
 
 .navigation ul {
   display: block;
@@ -37,9 +38,11 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   padding: 10px;
+  text-shadow: -2px 3px 2px #969696;
   color: #fff; }
 .navigation a:hover {
-  color: #ff7400; }
+  color: #ff7400;
+  text-shadow: none; }
 
 .slide {
   padding-bottom: 30px;
@@ -73,7 +76,7 @@
     height: auto;
     width: 218px;
     float: left;
-    margin-right: 35px; }
+    margin: 25px 35px 55px 0; }
     .container_16 .grid_4:last-child {
       margin-right: 0; }
     .container_16 .grid_4 .img {
@@ -93,15 +96,34 @@
         bottom: 0;
         right: 0; }
     .container_16 .grid_4 h3 {
-      font-size: 12pt;
+      font-size: 11pt;
       font-family: "Helvetica", sans-serif;
       font-style: bold;
-      color: #fff; }
+      color: #fff;
+      padding: 10px 1px; }
     .container_16 .grid_4 p {
       font-size: 11pt;
       font-family: Georgia, "Times New Roman", Times, serif;
       font-style: italic;
       color: #fff; }
+
+.clear {
+  clear: both; }
+
+.border_t, .border_1, .border_2, .border_3 {
+  width: auto;
+  height: 3px;
+  max-width: 980px;
+  margin: 0 auto; }
+
+.border_1 {
+  background: url(../img/border_1.jpg) repeat-x; }
+
+.border_2 {
+  background: url(../img/border_2.jpg); }
+
+.border_3 {
+  background: url(../img/border_3.jpg); }
 
 footer {
   height: 727px;

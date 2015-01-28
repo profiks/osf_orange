@@ -19,7 +19,7 @@ $screen-large:	1280;
 
   
     width: auto ;
-    height: 1183px;
+    min-height: 1183px;
     background: url(../img/background.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -42,6 +42,7 @@ $screen-large:	1280;
     font-size: 80pt;
     color: $white;
     text-align: center;
+    text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
 }
 
 .navigation {
@@ -69,12 +70,14 @@ font-size: 13pt;
 font-family: Georgia, "Times New Roman", Times, serif;
 font-style: italic;
 padding: 10px;
+text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
 color: $white;
 }
 
 a:hover
 {
 color: $orangeDark;
+    text-shadow: none;
 }
 }
 
@@ -128,7 +131,7 @@ margin-right: auto;
             height: auto;
             width: 218px;
             float: left;
-            margin-right: 35px;
+            margin: 25px 35px 55px 0;
             
                 &:last-child {
                    margin-right: 0;
@@ -137,13 +140,13 @@ margin-right: auto;
                 .img{
                     width: 218px;
                     height: 145px;
-                    background: url(../img/gradient.jpg);
+                    background: url(../img/gradient.jpg);    
                     position: relative;
                     
                         .plus{
                             display: block;
                             width: 21px;
-                            height: 22px;
+                            height: 22px;              
                             background: url(../img/plus.png) no-repeat;
                             margin: auto;
                             position: absolute;
@@ -153,10 +156,11 @@ margin-right: auto;
             
             h3 {
             
-                font-size: 12pt;
+                font-size: 11pt;
                 font-family: "Helvetica", sans-serif;
                 font-style: bold;
                 color: $white;
+                padding: 10px 1px;
             }
             
             p{
@@ -168,6 +172,32 @@ margin-right: auto;
         }
     
 }
+
+.clear{
+    clear: both;
+}
+
+.border_t{
+    width: auto;
+    height: 3px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.border_1{
+    @extend .border_t;
+    background: url(../img/border_1.jpg) repeat-x;
+}
+.border_2{
+    @extend .border_t;
+    background: url(../img/border_2.jpg);
+}
+
+.border_3{
+    @extend .border_t;
+    background: url(../img/border_3.jpg);
+}
+
 
 footer {
 height: 727px;
