@@ -16,29 +16,86 @@ $screen-large:	1280;
 
 
 
-.content{
-    
-
-  
+.content{   
     width: auto;
     min-height: 1183px;
     background: url(../img/background.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+/*typografy*/
 @font-face {
   font-family: 'Fangtasia';
   src: url('http://www.fontsaddict.com/fontface/fangtasia.ttf');
 }
-
 @font-face {
   font-family: 'Helvetica';
   src: url(helvetica-bold.ttf);
 }
 
+a{
+    text-decoration: none;  
+    font-size: 13pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    padding: 10px;
+    text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
+    color: $white;
+    &:hover{
+        color: $orangeDark;
+        text-shadow: none;
+    }
+}
+
+b{  
+    color: $white;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: Helvetica,sans-serif;
+    padding-left: 10px;
+}
+
+
+
+p, #custom-caption{
+     font-size: 11pt;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+     color: $white;
+    line-height: 1.5;
+}
+h2 {
+    font-size: 24pt;
+    font-family: "Helvetica", sans-serif;
+    font-style: bold;
+    color: $white;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    }
+
+h3 {
+            
+    font-size: 11pt;
+    font-family: "Helvetica", sans-serif;
+    font-style: bold;
+    color: $white;
+    padding: 10px 1px;
+}
+
+
+.orange {
+        color:$orange;
+}
+    
+.signature{
+        color:$gray;
+        clear: both;
+}
+
+/* Orande logo*/
 .logo {
     font-family: Fangtasia;
     font-size: 80pt;
@@ -47,64 +104,51 @@ $screen-large:	1280;
     text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
 }
 
-
-nav{  
+/*navigation & drop-down menu*/
+nav{         
     height: 53px;
     width: 600px;
     padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
+    position: relative;  
     
     .hover{
-    
+        
+        .top_menu{
+            position: absolute;
+            z-index: 45465465;
+            width: 475px;
+            height: 219px;
+            background: url(../img/drop_down.png) no-repeat;
+            padding-top: 20px;                    
+ 
+             ul {
+                 float: left;
+                 border-right: 1px solid $BorderUl;               
+                  &:last-child{
+                     border: none;
+                     }
+                 li{
+                     clear: both;
+                     line-height: 1.5;                     
+                     a {
+                         text-shadow: none;
+                         font-size: 11pt;
+                     }
+                    }
+             } 
+            }// end .top_menu
+        
     float: left;
         li {
             float: left;
         }
     }
     
-}
+} //end <nav>
 
-.top_menu{
-    
-    position: absolute;
-   
-
-}
-            
-/*        
-    
-   
-b{
-    color: $white;
-    font-weight: bold;
-    font-size: 13pt;
-    font-family: Helvetica,sans-serif;
-    padding-left: 10px;
-}
- a{
-text-decoration: none;  
-font-size: 13pt;
-font-family: Georgia, "Times New Roman", Times, serif;
-font-style: italic;
-padding: 10px;
-text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
-color: $white;
-}
-
-a:hover
-{
-color: $orangeDark;
-    text-shadow: none;
-}
-
-
-}
-
-
-
-  */
+/*drop down*/
 nav ul .top_menu {
 	display: none;
 }
@@ -115,12 +159,12 @@ nav ul .top_menu {
 
 
 
+/* jQuery slideshow*/
 .slide {
 max-width: 980px;
     height: 451px;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto;    
     img{
     padding-left: 50px;
     }
@@ -134,11 +178,11 @@ max-width: 980px;
         cursor: pointer;
         z-index: 2;
         background: url(../img/visit_site.png) no-repeat 0 0;
-         &:hover{             
+         /*&:hover{             
             background: url(../img/visit_site.png) no-repeat 0 -32px;
-            }
+            }*/
     }
-    
+    /*slideshov navigation*/
     .cycle-next{
         float: left;
         margin-right: 9px;
@@ -149,9 +193,7 @@ max-width: 980px;
         &:hover{
             background: url(../img/btn.png) no-repeat -20px -24px;
         }
-    }
-    
-    
+    } 
     .cycle-prev {
         float: left;
         margin-right: 9px;
@@ -166,35 +208,9 @@ max-width: 980px;
 }
 
 
-p, #custom-caption{
-     font-size: 11pt;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-     color: $white;
-    line-height: 1.5;
-}
-
-
-    h2 {
-        font-size: 24pt;
-         font-family: "Helvetica", sans-serif;
-         font-style: bold;
-        color: $white;
-        text-transform: uppercase;
-        padding-bottom: 20px;
-    }
-
-h3 {
-            
-     font-size: 11pt;
-    font-family: "Helvetica", sans-serif;
-    font-style: bold;
-    color: $white;
-    padding: 10px 1px;
-    }
-
+/*content grid*/
 .container_16{
-    @extend .clear;
+@extend .clear;
 max-width: 980px;
 margin-left: auto;
 margin-right: auto;
@@ -203,18 +219,15 @@ margin-right: auto;
             height: auto;
             width: 218px;
             float: left;
-            margin: 25px 35px 55px 0;
-            
+            margin: 25px 35px 55px 0;            
                 &:last-child {
                    margin-right: 0;
-                }
-            
+                }            
                 .img{
                     width: 218px;
                     height: 145px;
                     background: url(../img/gradient.jpg);    
-                    position: relative;
-                    
+                    position: relative;                    
                         .plus{
                             display: block;
                             width: 21px;
@@ -222,7 +235,7 @@ margin-right: auto;
                             background: url(../img/plus.png) no-repeat;
                             margin: auto;
                             position: absolute;
-                      top: 0; left: 0; bottom: 0; right: 0;
+                            top: 0; left: 0; bottom: 0; right: 0;
                         }
                 }
             
@@ -232,6 +245,7 @@ margin-right: auto;
     
 }
 
+/* clear float*/
 .clear{
     clear: both;
 }
@@ -257,7 +271,7 @@ margin-right: auto;
     background: url(../img/border_3.jpg);
 }
 
-
+/*footer*/
 footer {
 height: 727px;
 width: auto;
@@ -273,16 +287,7 @@ background: url(../img/gradient.jpg) repeat;
         height: auto;
         margin: 0 auto;
     }
-    
-    .orange {
-        color:$orange;
-    }
-    
-    .signature{
-        color:$gray;
-        clear: both;
-    }
-    
+        
     .article{
         width: 356px;
         height: auto;
@@ -303,11 +308,9 @@ background: url(../img/gradient.jpg) repeat;
             background: url(../img/orange_footer.png) no-repeat;
             position: absolute;
             right: 0;
-            top: -50px;           
-        
+            top: -50px;  
         }
-        
-        .glass{
+         .glass{
           width:73px ;
           height: 63px;
           background: url(../img/glass.jpg) no-repeat;
