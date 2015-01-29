@@ -40,8 +40,7 @@ a{
     text-decoration: none;  
     font-size: 13pt;
     font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-    padding: 10px;
+    font-style: italic;    
     text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
     color: $white;
     &:hover{
@@ -90,10 +89,6 @@ h3 {
         color:$orange;
 }
     
-.signature{
-        color:$gray;
-        clear: both;
-}
 
 /* Orande logo*/
 .logo {
@@ -131,7 +126,7 @@ nav{
                      }
                  li{
                      clear: both;
-                     line-height: 1.5;                     
+                     line-height: 1.5;
                      a {
                          text-shadow: none;
                          font-size: 11pt;
@@ -143,6 +138,7 @@ nav{
     float: left;
         li {
             float: left;
+             padding: 0 10px 0 10px;
         }
     }
     
@@ -222,12 +218,18 @@ margin-right: auto;
             margin: 25px 35px 55px 0;            
                 &:last-child {
                    margin-right: 0;
-                }            
-                .img{
-                    width: 218px;
-                    height: 145px;
-                    background: url(../img/gradient.jpg);    
-                    position: relative;                    
+                }  
+                
+            img{
+                width: 218px;
+                height: 145px;
+                position: relative; 
+            }
+                
+                .img{  
+                    @extend img;
+                    background: url(../img/gradient.jpg);  
+                                       
                         .plus{
                             display: block;
                             width: 21px;
@@ -239,7 +241,10 @@ margin-right: auto;
                         }
                 }
             
-            
+                a{
+                    margin: 0;
+                    padding: 0;
+                }
                         
         }
     
@@ -316,14 +321,58 @@ background: url(../img/gradient.jpg) repeat;
           background: url(../img/glass.jpg) no-repeat;
           border: 4px solid $orangeDark;
           margin: 15px 20px 22px 0;
-          float: left;
+          //float: left;
               &:last-child{
                   clear: both;
               }
         }
-    }
+        
+        // tooltipe
+        .tooltip{
+            display: inline;
+            position: relative;
+            
+                &:hover:after{                    
+                    bottom: -20px;
+                    color: $gray;
+                    content: attr(title);
+                    left: 0;
+                    position: absolute;
+                    z-index: 98;
+                    width: 220px;
+                }
+                // arrow
+                &:hover:before{
+                    position: absolute;
+                    content: "";
+                    left: 8px;
+                    bottom: 19px;
+                    width: 0; 
+                    height: 0; 
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;	
+                    border-top: 8px solid $orangeDark;
+                
+                }
+        }
+                
+    }    
+    
+
     
 }
 
+/*Fancybox close*/
 
+.fancybox-close{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 89px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 856767676767040;
+    background: url(../img/video-close.png) no-repeat;
+    
+}
     
