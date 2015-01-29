@@ -4,6 +4,7 @@ $white:#fff;
 $orange: #ff8809; 
 $orangeDark: #ff7400;
 $gray: #939393;
+$BorderUl: #292929;
 
 
 $mobile-small:  240;
@@ -19,7 +20,7 @@ $screen-large:	1280;
     
 
   
-    width: auto ;
+    width: auto;
     min-height: 1183px;
     background: url(../img/background.jpg) no-repeat center center; 
   -webkit-background-size: cover;
@@ -46,26 +47,43 @@ $screen-large:	1280;
     text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
 }
 
-.navigation {
 
-
-ul {
-    display: block;
- padding-top: 20px;
-list-style-type: none;
-text-align: center;
-height: 53px;
+nav{  
+    height: 53px;
     width: 600px;
-    
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    
+    .hover{
+    
+    float: left;
+        li {
+            float: left;
+        }
+    }
     
 }
 
- li { display: inline; }
+.top_menu{
+    
+    position: absolute;
+   
 
- a
-{
+}
+            
+/*        
+    
+   
+b{
+    color: $white;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: Helvetica,sans-serif;
+    padding-left: 10px;
+}
+ a{
 text-decoration: none;  
 font-size: 13pt;
 font-family: Georgia, "Times New Roman", Times, serif;
@@ -80,14 +98,25 @@ a:hover
 color: $orangeDark;
     text-shadow: none;
 }
+
+
 }
 
 
 
-  
+  */
+nav ul .top_menu {
+	display: none;
+}
+
+	nav ul li:hover > .top_menu {
+		display: block;
+}
+
+
+
 .slide {
-padding-bottom: 30px;
-width: 980px;
+max-width: 980px;
     height: 451px;
     margin-left: auto;
     margin-right: auto;
@@ -96,26 +125,40 @@ width: 980px;
     padding-left: 50px;
     }
     
+    .visit{
+        width: 145px;
+        height: 32px;
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        cursor: pointer;
+        z-index: 2;
+        background: url(../img/visit_site.png) no-repeat 0 0;
+         &:hover{             
+            background: url(../img/visit_site.png) no-repeat 0 -32px;
+            }
+    }
     
-    
-    .nextSlide {
+    .cycle-next{
         float: left;
+        margin-right: 9px;
         width: 20px;
         height: 24px;
         background: url(../img/btn.png) no-repeat -20px 0;
-        
+        cursor: pointer;
         &:hover{
             background: url(../img/btn.png) no-repeat -20px -24px;
         }
     }
     
     
-    .prevSlide {
+    .cycle-prev {
         float: left;
+        margin-right: 9px;
         width: 20px;
         height: 24px;
         background: url(../img/btn.png) no-repeat 0 0;
-        
+        cursor: pointer;
         &:hover{
             background: url(../img/btn.png) no-repeat 0 -24px;
         }
@@ -123,7 +166,7 @@ width: 980px;
 }
 
 
-p{
+p, #custom-caption{
      font-size: 11pt;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-style: italic;
@@ -151,8 +194,8 @@ h3 {
     }
 
 .container_16{
-padding-top: 10px;
-width: 980px;
+    @extend .clear;
+max-width: 980px;
 margin-left: auto;
 margin-right: auto;
    
@@ -237,7 +280,7 @@ background: url(../img/gradient.jpg) repeat;
     
     .signature{
         color:$gray;
-        clear: left;
+        clear: both;
     }
     
     .article{
@@ -248,7 +291,8 @@ background: url(../img/gradient.jpg) repeat;
     }
     
     .captions{
-        width: auto;
+        display: table;
+        width: 565px;
         height: auto;
         padding: 65px 0 0 0;
         position: relative;

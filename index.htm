@@ -5,6 +5,7 @@
     <title>Orange</title>
     <link rel="stylesheet" href="css/bjqs.css">
      <link rel="stylesheet" href="css/style.css">
+      <script src="js/cssrefresh.js"></script>
        
        <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -19,31 +20,82 @@
                <h1 class="logo">Orange</h1>
            
            <div class="border_2"></div>
-           <nav class="navigation">
-               <ul>
-                   <li><a href="#">Home</a></li>
-                   <li><a href="#">Free Download</a></li>
-                   <li><a href="#">About</a></li>
-                   <li><a href="#">Blog</a></li>
-                   <li><a href="#">Page Template</a></li>
-                   <li><a href="#">Contact</a></li>
-               </ul>
-           </nav>
+         <nav>
+               <ul class="hover">
+               <li><a href="#e">Home</a>
+                       <div class="top_menu">
+                           <ul>
+                              <li><b>Websites</b></li>
+                               <li><a href="">Web Design</a></li>
+                               <li><a href="">Buttons</a></li>
+                               <li><a href="">Banners</a></li>
+                               <li><a href="">Fonts</a></li>
+                               <li><a href="">Patterns</a></li>
+                               <li><a href="">Navigation</a></li>
+                           </ul>
+                           
+                           <ul>    
+                               <li><b>Templates</b></li>
+                               <li><a href="">Simple Bbutton</a></li>
+                               <li><a href="">Coloured button</a></li>
+                               <li><a href="">Large Button</a></li>
+                               <li><a href="">Fat Button</a></li>
+                               <li><a href="">Free Button</a></li>
+                               <li><a href="">Price Button</a></li>
+                           </ul>
+                           
+                           <ul>   
+                              <li><b>Scripts</b></li>
+                               <li><a href="">jQuery Gallery</a></li>
+                               <li><a href="">Rollover Effect</a></li>
+                               <li><a href="">Hover Transition</a></li>
+                               <li><a href="">Css Buttons</a></li>
+                           </ul>
+                           
+                       </div> 
+               
+               </li>
+               <li> <a href="#">Free Download</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Blog</a></li>
+               <li><a href="#">Page Template</a></li>
+               <li><a href="#">Contact</a></li>                
+                </ul>
+                      
+                    
+           </nav> 
+    
+           
+           <!-- dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd-->
            <div class="border_3"></div>
    </header>
    
    
        <div class="slide">
-       <div id="banner-fade">
+       <!-- Slideshow-->
+       <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="3000" data-cycle-caption="#custom-caption"
+    data-cycle-caption-template="Next Slide ({{slideNum}}/{{slideCount}})">
+          <div class="sycle-caption"></div>  
+          
+          <div class="cycle-prev"></div>
+          <div class="cycle-next"></div>
+          
+           <img src="img/orange.png" alt="Slide 1">           
+           <img src="img/orange2.png" alt="Slide 2">
+                 
+            <div class="visit"></div>       
+       </div>
+      <div id="custom-caption"></div> 
+      <!-- <div id="banner-fade">
 
-        <!-- start Basic Jquery Slider -->
+       
         <ul class="bjqs">
           <li><img src="img/orange.png"></li>
           <li><img src="img/orange2.png"></li>
         </ul>
-        <!-- end Basic jQuery Slider -->
+        
 
-      </div>
+      </div> -->
       </div>
       
             
@@ -159,7 +211,8 @@
    
    
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/bjqs-1.3.min.js"></script>
+  <!-- <script src="js/bjqs-1.3.min.js"></script> -->
+  <script src="js/jquery-cycle2.js"></script>
   <script src="js/scripts.js"></script> 
 </body>
 </html>
