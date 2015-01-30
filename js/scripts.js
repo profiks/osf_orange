@@ -14,7 +14,7 @@ $(document).ready(function() {
    // $(".iframe").trigger('click');
     
     //fit text for responsivity
-    $(".logo").fitText(0.8,{maxFontSize: '120px' });
+    $(".logo").fitText(0.8,{maxFontSize: '75px' });
     
     //responsive slideshow
     $(".rslides").responsiveSlides({
