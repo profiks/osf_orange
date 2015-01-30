@@ -69,7 +69,7 @@ h3 {
 /*navigation & drop-down menu*/
 nav {
   height: 53px;
-  width: 600px;
+  max-width: 600px;
   padding-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -105,45 +105,73 @@ nav ul .top_menu {
 nav ul li:hover > .top_menu {
   display: block; }
 
-/* jQuery slideshow*/
+/* jQuery slideshow */
 .slide {
   max-width: 980px;
-  height: 451px;
+  max-height: 451px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3%;
+  position: relative;
   /*slideshov navigation*/ }
-  .slide img, .slide .container_16 .grid_4 .img, .container_16 .grid_4 .slide .img {
-    padding-left: 50px; }
+  .slide .rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+    .slide .rslides li {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      display: none;
+      width: 100%;
+      left: 0;
+      top: 0; }
+      .slide .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left; }
+    .slide .rslides img, .slide .rslides .container_16 .grid_4 .img, .container_16 .grid_4 .slide .rslides .img {
+      padding-left: 50px;
+      display: block;
+      height: auto;
+      float: left;
+      width: 100%;
+      border: 0; }
   .slide .visit {
     width: 145px;
     height: 32px;
     position: absolute;
     left: 0;
-    bottom: 20px;
+    bottom: 10px;
     cursor: pointer;
     z-index: 2;
-    background: url(../img/visit_site.png) no-repeat 0 0;
-    /*&:hover{             
-       background: url(../img/visit_site.png) no-repeat 0 -32px;
-       }*/ }
-  .slide .cycle-next {
+    background: url(../img/visit_site.png) no-repeat 0 0; }
+    .slide .visit:hover {
+      background: url(../img/visit_site.png) no-repeat 0 -32px; }
+  .slide .next {
     float: left;
     margin-right: 9px;
     width: 20px;
     height: 24px;
     background: url(../img/btn.png) no-repeat -20px 0;
     cursor: pointer; }
-    .slide .cycle-next:hover {
+    .slide .next:hover {
       background: url(../img/btn.png) no-repeat -20px -24px; }
-  .slide .cycle-prev {
+  .slide .prev {
     float: left;
     margin-right: 9px;
     width: 20px;
     height: 24px;
     background: url(../img/btn.png) no-repeat 0 0;
     cursor: pointer; }
-    .slide .cycle-prev:hover {
+    .slide .prev:hover {
       background: url(../img/btn.png) no-repeat 0 -24px; }
+  .slide .countSlide {
+    position: absolute;
+    left: 55px;
+    width: 130px; }
 
 /*content grid*/
 .container_16 {

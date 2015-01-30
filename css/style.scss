@@ -102,7 +102,7 @@ h3 {
 /*navigation & drop-down menu*/
 nav{         
     height: 53px;
-    width: 600px;
+    max-width: 600px;
     padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -155,31 +155,68 @@ nav ul .top_menu {
 
 
 
-/* jQuery slideshow*/
+/* jQuery slideshow */
 .slide {
-max-width: 980px;
-    height: 451px;
+    max-width: 980px;
+    max-height: 451px;
     margin-left: auto;
-    margin-right: auto;    
-    img{
-    padding-left: 50px;
-    }
+    margin-right: auto;
+    margin-bottom: 3%;
+    position: relative;
+    
+
+    .rslides {
+      position: relative;
+      list-style: none;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      
+
+        li{
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      display: none;
+      width: 100%;
+      left: 0;
+      top: 0;
+        
+                &:first-child {
+                  position: relative;
+                  display: block;
+                  float: left;
+                  }
+      }
+
+    
+
+    img {
+      padding-left: 50px;
+      display: block;
+      height: auto;
+      float: left;
+      width: 100%;
+      border: 0;
+      }
+
+}
     
     .visit{
         width: 145px;
         height: 32px;
         position: absolute;
         left: 0;
-        bottom: 20px;
+        bottom: 10px;
         cursor: pointer;
         z-index: 2;
         background: url(../img/visit_site.png) no-repeat 0 0;
-         /*&:hover{             
+         &:hover{             
             background: url(../img/visit_site.png) no-repeat 0 -32px;
-            }*/
+            }
     }
     /*slideshov navigation*/
-    .cycle-next{
+    .next{
         float: left;
         margin-right: 9px;
         width: 20px;
@@ -190,7 +227,7 @@ max-width: 980px;
             background: url(../img/btn.png) no-repeat -20px -24px;
         }
     } 
-    .cycle-prev {
+    .prev {
         float: left;
         margin-right: 9px;
         width: 20px;
@@ -201,7 +238,19 @@ max-width: 980px;
             background: url(../img/btn.png) no-repeat 0 -24px;
         }
     }
-}
+    
+    .countSlide{
+        //outline: 1px solid red;
+        position: absolute;
+        //bottom:0;
+        left:55px;
+        width: 130px;
+    }
+} 
+
+
+
+
 
 
 /*content grid*/
@@ -375,4 +424,6 @@ background: url(../img/gradient.jpg) repeat;
     background: url(../img/video-close.png) no-repeat;
     
 }
+
+
     

@@ -16,4 +16,23 @@ $(document).ready(function() {
     //fit text for responsivity
     $(".logo").fitText(0.8,{maxFontSize: '120px' });
     
+    //responsive slideshow
+    $(".rslides").responsiveSlides({
+        maxwidth: "980",
+        nav: true,
+        prevText: "",
+        nextText: "",
+        after: function(i){
+        var num = $('.rslides1_on').index();
+        var currentSlide = num + 1;
+        var slidesCount = $('.rslides li').size();
+    $(".countSlide").html(" Nexs Slide ("+currentSlide+"/"+slidesCount+")"); 
+        }
+    });
+    
+   
+    
+   
+    
+    
 }); //end Dom ready
