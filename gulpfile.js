@@ -2,9 +2,9 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     uglify = require('gulp-uglify');
 
-gulp.task('minihtm', function() {
-  gulp.src('*.htm')
-    .pipe(htmlmin({"removeComments": true,}))
+gulp.task('minify', function() {
+  gulp.src('index.htm')
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('min'))
 });
 
