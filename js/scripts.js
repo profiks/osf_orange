@@ -10,8 +10,7 @@ $(document).ready(function() {
     scrolling: 'no'
     });
      
-    
-   // $(".iframe").trigger('click');
+  
     
     //fit text for responsivity
     $(".logo").fitText(0.8,{maxFontSize: '75px' });
@@ -30,9 +29,25 @@ $(document).ready(function() {
         }
     });
     
-   
+   /*
+     var wh = $(window).height();   // returns height of browser viewport
+    var dh =$(document).height(); // returns height of HTML document
+    var ww = $(window).width();   // returns width of browser viewport
+    var dw = $(document).width(); // returns width of HTML document
+       
     
-   
     
+    
+    
+  var width = $(window).width();
+             
+                  
+            $(window).resize(function(){
+               if($(this).width() != width){
+                  width = $(this).width();
+                  $(".size").html("Window width :" +width);  
+               }
+            });
+ */
     
 }); //end Dom ready

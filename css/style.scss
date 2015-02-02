@@ -1,11 +1,10 @@
 @import "reset.css";
-//@import 'media-queries.scss';
-
 $white:#fff;
 $orange: #ff8809; 
 $orangeDark: #ff7400;
 $gray: #939393;
 $BorderUl: #292929;
+
 
 
 $mobile-small:   240px;
@@ -16,26 +15,6 @@ $screen-small:	 1024px;
 $screen-large:	 1280px;
 
 
-@mixin transition-width() {
-           -webkit-transition: max-width .3s ease;
-            -moz-transition: max-width .3s ease;
-            -o-transition: max-width .3s ease;
-            transition: max-width .3s ease;
-}
-
-@mixin bg-size(){
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.content{   
-    width: auto;
-    min-height: 1183px;
-    background: url(../img/background.jpg) no-repeat center center; 
-    @include bg-size;
-}
 
 /*typografy*/
 @font-face {
@@ -47,8 +26,7 @@ $screen-large:	 1280px;
   src: url(helvetica-bold.ttf);
 }
 
-a{
-    text-decoration: none;  
+a{  text-decoration: none;  
     font-size: 13pt;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-style: italic;    
@@ -57,6 +35,7 @@ a{
     &:hover{
         color: $orangeDark;
         text-shadow: none;
+        text-decoration: none; 
     }
 }
 
@@ -65,16 +44,15 @@ b{
     font-weight: bold;
     font-size: 13pt;
     font-family: Helvetica,sans-serif;
-    padding-left: 10px;
 }
 
 
 
-p, #custom-caption{
+p{
      font-size: 11pt;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-style: italic;
-     color: $white;
+    color: $white;
     line-height: 1.5;
 }
 h2 {
@@ -101,27 +79,93 @@ h3 {
 }
     
 
-/* Orande logo*/
-.logo {
-    font-family: Fangtasia;
-    font-size: 80pt;
-    color: $white;
-    padding-top: 10px;
-    text-align: center;
-    text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
+.border_t{
+    width: auto;
+    height: 3px;
+    max-width: 980px;
+    margin: 0 auto;
 }
+
+.border_1{
+    @extend .border_t;
+    background: url(../img/border_1.jpg) repeat-x;
+    margin-bottom: 24px;
+}
+.border_2{
+    @extend .border_t;
+    background: url(../img/border_2.jpg);
+}
+
+.border_3{
+    @extend .border_t;
+    background: url(../img/border_3.jpg);
+}
+
+@mixin transition-width() {
+           -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+}
+
+@mixin bg-size(){
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.col-md-12,
+.col-md-6,
+.col-md-3,
+.col-md-4,
+.col-md-8{
+padding: 0;
+}
+
+
+
+.bg{
+    background: url(../img/background.jpg) no-repeat;
+   background-position: center center;  
+   background-attachment: fixed;
+    @include bg-size; 
+    width: 100%;
+    
+        /* Orande logo*/
+        .logo {
+            font-family: Fangtasia;
+            font-size: 60pt;
+            color: $white;
+            text-align: center;
+            text-shadow: -2px 3px 2px rgba(150, 150, 150, 1);
+            padding: 14px 0 0 0 ;
+
+            
+        }
+}
+
+
+.row {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
 
 /*navigation & drop-down menu*/
 nav{ 
     height: 53px;
-    max-width: 600px;
-    padding-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative; 
-    
-    .hover{
+    width: 500px;
+        @media (max-width: 750px) { 
+             width: auto;
+        }
         
+    text-align: center;    
+    padding-top: 20px;
+    position: relative;
+                    
         .top_menu{
             position: absolute;
             z-index: 45465465;
@@ -132,12 +176,15 @@ nav{
  
              ul {
                  float: left;
-                 border-right: 1px solid $BorderUl;               
+                 border-right: 1px solid $BorderUl;
+                 
+                 padding: 0;
+                 margin: 0;
                   &:last-child{
                      border: none;
                      }
                  li{
-                     clear: both;
+                     clear:both;
                      line-height: 1.5;
                      a {
                          text-shadow: none;
@@ -147,12 +194,19 @@ nav{
              } 
             }// end .top_menu
         
-    float: left;
+    
         li {
             float: left;
              padding: 0 15px 0 10px;
+                @media (max-width: 750px) { 
+                width: auto;
+                clear: left;
+               
+                
+            } //end 
+
         }
-    }
+   
     
 } //end <nav>
 
@@ -170,10 +224,10 @@ nav ul .top_menu {
 /* jQuery slideshow */
 .slide {    
     max-width: 980px;
-    max-height: 451px;
+    //min-height: 451px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
     position: relative;
    
 
@@ -219,13 +273,19 @@ nav ul .top_menu {
         height: 32px;
         position: absolute;
         left: 0;
-        bottom: 10px;
+        bottom: 60px;
         cursor: pointer;
         z-index: 2;
         background: url(../img/visit_site.png) no-repeat 0 0;
          &:hover{             
-            background: url(../img/visit_site.png) no-repeat 0 -32px;
+     background: url(../img/visit_site.png) no-repeat 0 -32px;
             }
+        /* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) { 
+    display: none;
+}
+        
+        
     }
     /*slideshov navigation*/
     .next{
@@ -236,7 +296,7 @@ nav ul .top_menu {
         background: url(../img/btn.png) no-repeat -20px 0;
         cursor: pointer;
         &:hover{
-            background: url(../img/btn.png) no-repeat -20px -24px;
+        background: url(../img/btn.png) no-repeat -20px -24px;
         }
     } 
     .prev {
@@ -253,125 +313,84 @@ nav ul .top_menu {
     
     .countSlide{
         position: absolute;
-        left:55px;
+        left:65px;
         width: 130px;
     }
     
    
 } 
 
-
- /*@media screen and (max-width: $screen-small) {            
-        
-           .visit, .prev, .countSlide{
-               margin-left: 20px;
-           }
-        
+.content{
+        padding: 0 0 53px 0;
+        .col-md-3{  
             
-    }*/
+   /* Portrait tablet to landscape and desktop */
+@media (min-width: $screen-small) { 
+    
+    max-width: 218px;
+    margin: 0 36px 0 0;
+     
+            &:last-child{
+                margin:  0;
+            }
+    
 
 
-
-/*content grid*/
-.container_16{    
-@extend .clear;
-max-width: 980px;
-margin-left: auto;
-margin-right: auto;
-       
-   
-        .grid_4{
-            min-height: 250px;
-            max-height: 250px;
-            overflow: hidden;
-            width: 218px;
-            float: left;
-            margin: 25px 35px 55px 0;            
-                &:last-child {
-                   margin-right: 0;
-                }  
+} //end Desktop
             
-                
-            img{
-                width: 218px;
-                height: 145px;
-                position: relative; 
-                
-                 &:hover{    
-                            opacity: 0.8;
-                        }
-                
-            }                
-                        
+@media (min-width:$tablet-large) and (max-width: $screen-small) { 
+    
+    max-width: 49%;
+    margin: 0 1% 0 0;
+     
+            &:last-child{
+                margin:  0;
+            }
+    
+
+
+} //end D
+        
+     
+        }  
+        .col-md-12{
+            padding: 23px 0 0 0;
+            
+             
         }
     
 }
 
-/* clear float*/
-.clear{
-    clear: both;
-}
-
-.border_t{
-    width: auto;
-    height: 3px;
-    max-width: 980px;
-    margin: 0 auto;
-}
-
-.border_1{
-    @extend .border_t;
-    background: url(../img/border_1.jpg) repeat-x;
-}
-.border_2{
-    @extend .border_t;
-    background: url(../img/border_2.jpg);
-}
-
-.border_3{
-    @extend .border_t;
-    background: url(../img/border_3.jpg);
-}
-
-/*footer*/
-footer {
-height: 727px;
-width: auto;
-background: url(../img/gradient.jpg) repeat; 
-    
+footer{
     .border{
         width: 100%;
         height: 13px;
-        background: url(../img/border.jpg) repeat-x;    
+        background: url(../img/border.jpg) repeat-x;
     }
-    .centred{
-        max-width: 980px;
-        width: auto;
-        height: auto;
-        margin: 0 auto;               
-    }
-        
-    .article{
-        width: 356px;
-        height: auto;
-        padding: 65px 55px 0 0;        
-        float: left;
-    }
+}
+.container.footer{
     
-    .captions{
-        display: table;
-        width: 565px;
-        height: auto;
-        padding: 65px 0 0 0;
-        position: relative;
-        
+ 
+
+background: url(../img/gradient.jpg) repeat; 
+    color: #fff;
+   width: 100%;
+    min-height: 727px;
+    padding-top: 69px;
+    position: relative;
+    
+    
+        .col-md-4{
+        padding: 0 23px 0 0;
+        }
+    
         .absolute-orange{
             width: 233px;
             height: 170px;
             background: url(../img/orange_footer.png) no-repeat;
             position: absolute;
             right: 0;
-            top: -50px;  
+            top: -120px;  
         }
          .glass{
           width:73px ;
@@ -381,7 +400,7 @@ background: url(../img/gradient.jpg) repeat;
           margin: 15px 20px 22px 0;
           //float: left;
               &:last-child{
-                  clear: both;
+                 // .clearfix;
               }
         }
         
@@ -391,7 +410,7 @@ background: url(../img/gradient.jpg) repeat;
             position: relative;
             
                 &:hover:after{                    
-                    bottom: -20px;
+                    bottom: -40px;
                     color: $gray;
                     content: attr(title);
                     left: 0;
@@ -404,7 +423,7 @@ background: url(../img/gradient.jpg) repeat;
                     position: absolute;
                     content: "";
                     left: 8px;
-                    bottom: 19px;
+                    bottom: 20px;
                     width: 0; 
                     height: 0; 
                     border-left: 8px solid transparent;
@@ -413,12 +432,10 @@ background: url(../img/gradient.jpg) repeat;
                 
                 }
         }
-                
-    }    
     
-
     
 }
+
 
 /*Fancybox close*/
 
@@ -433,66 +450,3 @@ background: url(../img/gradient.jpg) repeat;
     background: url(../img/video-close.png) no-repeat;
     
 }
-
-
- @media screen and (max-width: $screen-small) {            
-        
-     .slide, 
-     .container_16, 
-     .centred {
-            max-width: $tablet-large;
-         
-                 .article,.captions{
-                     width: 80%;
-                     padding: 40px;
-                 }
-                 .grid_4{
-                     text-align: center;
-                     width: 50%;
-                     margin: 25px 0 50px 0;             
-                 img{
-                     width: 85%;
-                     height: 30%;
-                 }
-             
-                 p {
-                     display: none;
-                 }
-                 }
-         
-     }
-     
-  }
-
-
- @media screen and (max-width: $tablet-large) {
-           
-         .slide, 
-         .container_16, 
-         .centred {
-             max-width: $tablet-small;
-             
-             .grid_4{
-                 width: 100%;
-             }
-         }
-        nav{ 
-            
-            z-index: 7897799;
-            li{                  
-                clear: both;
-            }
-            //display: none;
-        }
-     
-     .border_2{
-         display: none;
-     } .border_3{
-         display: none;
-     }
-     
- }
-
-    
-
-    
