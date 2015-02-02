@@ -1,16 +1,16 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    htmlmin = require('gulp-htmlmin'),
+    uglify = require('gulp-uglify');
 
-/*gulp.task('default', function(){
+gulp.task('minihtm', function() {
+  gulp.src('*.htm')
+    .pipe(htmlmin({"removeComments": true,}))
+    .pipe(gulp.dest('min'))
+});
 
-
-
-});*/
-var minifyHTML = require('gulp-minify-html');
  
-gulp.task('minify-html', function() {
-    var opts = {comments:true,spare:true};
-    
-  gulp.src('index2.htm')
-    .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('dist/'))
+gulp.task('compressjs', function() {
+  gulp.src('js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('min'))
 });
